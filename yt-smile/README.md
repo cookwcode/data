@@ -2,6 +2,8 @@
 
 A database of videos that I have enjoyed. 
 
+- Here's the [Observable notebook](https://observablehq.com/d/34d2565cf3ff4ff3) that uses this data to share the vids.
+
 ## Tables
 
 - video: row is a video
