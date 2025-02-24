@@ -1,6 +1,6 @@
 # Harry Potter Books and Films
 
-Info on the Harry Potter books and Films
+Info on the Harry Potter books and films
 
 - year: year the item was released (YYYY)
 - key: group key for Harry Potter series (Note: Both Deathly Hallows films share the same key)
