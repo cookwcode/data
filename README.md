@@ -10,6 +10,6 @@ Tags are used to reference data instances
 
 | Tag | Folder |
 |-----|--------|
-| hpt | harry-potter-timeline |
-| pota | planet-of-the-apes |
+| hpt | [harry-potter-timeline](harry-potter-timeline) |
+| pota | [planet-of-the-apes](/planet-of-the-apes) |
 | yts | [yt-smile](/yt-smile) |
