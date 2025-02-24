@@ -1,16 +1,16 @@
-year,name,type,label
-1997,Harry Potter and the Philosopher's Stone,book,🪨
-1998,Harry Potter and the Chamber of Secrets,book,🤫
-1999,Harry Potter and the Prisoner of Azkaban,book,👻
-2000,Harry Potter and the Goblet of Fire,book,🔥
-2003,Harry Potter and the Order of the Phoenix,book,🐦‍🔥
-2005,Harry Potter and the Half-Blood Prince,book,🩸
-2007,Harry Potter and the Deathly Hallows,book,💀
-2001,Harry Potter and the Philosopher's Stone,film,🪨
-2002,Harry Potter and the Chamber of Secrets,film,🤫
-2004,Harry Potter and the Prisoner of Azkaban,film,👻
-2005,Harry Potter and the Goblet of Fire,film,🔥
-2007,Harry Potter and the Order of the Phoenix,film,🐦‍🔥
-2009,Harry Potter and the Half-Blood Prince,film,🩸
-2010,Harry Potter and the Deathly Hallows - Part 1,film,💀
-2011,Harry Potter and the Deathly Hallows - Part 2,film,☠️
+year,key,name,type,label
+1997,hp1,Harry Potter and the Philosopher's Stone,book,🪨
+1998,hp2,Harry Potter and the Chamber of Secrets,book,🤫
+1999,hp3,Harry Potter and the Prisoner of Azkaban,book,👻
+2000,hp4,Harry Potter and the Goblet of Fire,book,🔥
+2003,hp5,Harry Potter and the Order of the Phoenix,book,
+2005,hp6,Harry Potter and the Half-Blood Prince,book,
+2007,hp7,Harry Potter and the Deathly Hallows,book,
+2001,hp1,Harry Potter and the Philosopher's Stone,film,
+2002,hp2,Harry Potter and the Chamber of Secrets,film,
+2004,hp3,Harry Potter and the Prisoner of Azkaban,film,
+2005,hp4,Harry Potter and the Goblet of Fire,film,
+2007,hp5,Harry Potter and the Order of the Phoenix,film,
+2009,hp6,Harry Potter and the Half-Blood Prince,film,
+2010,hp7a,Harry Potter and the Deathly Hallows - Part 1,film,
+2011,hp7b,Harry Potter and the Deathly Hallows - Part 2,film,
