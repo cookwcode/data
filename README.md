@@ -12,4 +12,4 @@ Tags are used to reference data instances
 |-----|--------|
 | hpt | harry-potter-timeline |
 | pota | planet-of-the-apes |
-| yts | yt-smile |
+| yts | [yt-smile](/yt-smile) |
