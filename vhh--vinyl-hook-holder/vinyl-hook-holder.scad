@@ -1,3 +1,5 @@
+$fn=100;  // Number of facets for circles
+
 // Default Parameters (mm)
 lengthBase = 130; // Length of the base
 widthGap = 40;    // Width of the gap holding the record
@@ -5,6 +7,8 @@ widthWall = 5;    // Wall thickness
 heightBase = widthWall;  // Height of the base
 heightFrontWall = 15;  // Front wall height, excluding the base
 heightMount = 50;  // Height of the back mount
+topLength = 30;  // Length of the top of the back mount
+EPS=0.01;
 
 module vinyl_hook_holder(
     lengthBase=lengthBase, 
@@ -20,6 +24,7 @@ module vinyl_hook_holder(
         moveFront = (widthBase / 2) - (widthWall / 2);  // Front wall position
         moveBack = -moveFront;  // Back wall position
         lengthMount = 0.7 * lengthBase;  // Length of the back mount
+        halfWall = widthWall / 2;  // Half the width of the wall
 
         // Base
         color("blue", 0.5) {
@@ -28,14 +33,45 @@ module vinyl_hook_holder(
             }
         }
 
+        // Front Channel
+        translate([0, moveFront-halfWall, 0]) {
+            difference() {
+                linear_extrude(widthWall*2) {
+                    square([lengthBase, widthWall*2], center = true);
+                }
+                translate([0, -widthWall, widthWall*2]) {
+                    rotate(a = [0, 90, 0]) {
+                        cylinder(h = lengthBase + EPS, r = widthWall, center = true);
+                    }
+                }                
+            }
+        }
+
+        // Back Channel
+        translate([0, moveBack+halfWall, 0]) {
+            color("red") {
+            difference() {
+                linear_extrude(widthWall*2) {
+                    square([lengthBase, widthWall*2], center = true);
+                }
+                translate([0, widthWall, widthWall*2]) {
+                    rotate(a = [0, 90, 0]) {
+                        cylinder(h = lengthBase + EPS, r = widthWall, center = true);
+                    }
+                }                
+            }
+            }
+        }
+
         // Front wall
         translate([0, moveFront, 0]) {
-            color("red", 0.5) {
+            color("blue", 0.5) {
                 linear_extrude(heightFront) {
                     square([lengthBase, widthWall], center = true);
                 }
             }
         }
+
 
         // Back wall
         translate([0, moveBack, 0]) {
@@ -47,7 +83,6 @@ module vinyl_hook_holder(
         }
 
         // Back mount (trapezoid)
-        topLength = 30;
         translate([0, moveBack, 0]) {
             color("green", 0.5) {
             linear_extrude(height=heightMount, scale=[topLength / lengthMount, 1]) {
