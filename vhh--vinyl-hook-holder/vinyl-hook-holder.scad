@@ -1,9 +1,9 @@
 // Default Parameters (mm)
 lengthBase = 130; // Length of the base
-widthGap = 11;    // Width of the gap holding the record
-widthWall = 4;    // Wall thickness
+widthGap = 40;    // Width of the gap holding the record
+widthWall = 5;    // Wall thickness
 heightBase = widthWall;  // Height of the base
-heightFrontWall = 13;  // Front wall height, excluding the base
+heightFrontWall = 15;  // Front wall height, excluding the base
 heightMount = 50;  // Height of the back mount
 
 module vinyl_hook_holder(
