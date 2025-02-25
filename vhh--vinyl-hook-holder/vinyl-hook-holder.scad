@@ -3,9 +3,7 @@ lengthBase = 130; // Length of the base
 widthGap = 11;    // Width of the gap holding the record
 widthWall = 4;    // Wall thickness
 heightBase = widthWall;  // Height of the base
-front = 13;  // Front wall height
-heightFront = front + widthWall;  // Total height of the front wall
-lengthMount = 22;  // Length of the back mount
+heightFrontWall = 13;  // Front wall height, excluding the base
 heightMount = 50;  // Height of the back mount
 
 module vinyl_hook_holder(
@@ -13,14 +11,15 @@ module vinyl_hook_holder(
     widthGap=widthGap,
     widthWall=widthWall, 
     heightBase=heightBase, 
-    heightFront=heightFront, 
-    lengthMount=lengthMount, 
+    heightFrontWall=heightFrontWall,
     heightMount=heightMount
     ) {
         // Setup
         widthBase = widthGap + (2 * widthWall);  // Width of the base
+        heightFront = heightFrontWall + widthWall;  // Total height of the front wall
         moveFront = (widthBase / 2) - (widthWall / 2);  // Front wall position
         moveBack = -moveFront;  // Back wall position
+        lengthMount = 0.7 * lengthBase;  // Length of the back mount
 
         // Base
         color("blue", 0.5) {
@@ -47,17 +46,24 @@ module vinyl_hook_holder(
             }
         }
 
-        // Back mount
+        // Back mount (trapezoid)
+        topLength = 30;
         translate([0, moveBack, 0]) {
             color("green", 0.5) {
-                linear_extrude(heightMount) {
-                    square([lengthMount, widthWall], center = true);
-                }
+            linear_extrude(height=heightMount, scale=[topLength / lengthMount, 1]) {
+                square([lengthMount, widthWall], center=true);
+            }
             }
         }
 }
 
+// Main --------------------
+vinyl_hook_holder();
+
+// Testing -----------------
+
 module test_widths() {
+    // Test different widths of inner channel
   vinyl_hook_holder(
     heightMount=0,
     lengthBase=40,
@@ -80,3 +86,5 @@ module test_widths() {
     );
     } 
 }
+
+// test_widths();
