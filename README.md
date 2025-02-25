@@ -6,4 +6,6 @@ Data source for Cook w/ Code projects
 
 ## Tags
 
-Datasets are tagged by folder code: Ex. `xyz--folder-name` has code `xyz`, example tag could be `xyz-v1`. See Releases for more info.
+Datasets are tagged by folder code. For example, `xyz--folder-name` has code `xyz`, so a tag could be like `xyz-v1`. 
+
+See Releases for info on specific data updates. Checkout the dataset readme's for data documentation.
