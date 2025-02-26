@@ -7,7 +7,7 @@ widthWall = 5;    // Wall thickness
 heightBase = widthWall;  // Height of the base
 heightFrontWall = 15;  // Front wall height, excluding the base
 heightMount = 50;  // Height of the back mount
-topLength = 30;  // Length of the top of the back mount
+topLength = 20;  // Length of the top of the back mount
 EPS=0.01;
 
 module vinyl_hook_holder(
@@ -25,14 +25,22 @@ module vinyl_hook_holder(
         moveBack = -moveFront;  // Back wall position
         lengthMount = 0.7 * lengthBase;  // Length of the back mount
         halfWall = widthWall / 2;  // Half the width of the wall
+        topLength = topLength*2;  // Length of the top of the back mount
 
         // Base
+        difference() {
         color("blue", 0.5) {
             linear_extrude(heightBase) {
                 square([lengthBase, widthBase], center = true);
             }
         }
 
+        color("yellow", 0.5) {
+            linear_extrude(heightBase*2) {
+                circle(r = 10);
+            }
+        } 
+        }
         // Front Channel
         translate([0, moveFront-halfWall, 0]) {
             difference() {
@@ -83,14 +91,32 @@ module vinyl_hook_holder(
         }
 
         // Back mount (trapezoid)
-        translate([0, moveBack, 0]) {
+        translate([lengthBase/2, moveBack, 0]) {
             color("green", 0.5) {
-            linear_extrude(height=heightMount, scale=[topLength / lengthMount, 1]) {
-                square([lengthMount, widthWall], center=true);
-            }
+                difference() {
+                    linear_extrude(height=heightMount, scale=[topLength / lengthMount, 1]) {
+                        square([lengthMount, widthWall], center=true);
+                    }
+                    translate([6*widthWall,0,heightMount/2]) {
+                        cube([12*widthWall+EPS, 2*widthWall+EPS, heightMount+EPS], center=true);
+                    }
+                }
             }
         }
-}
+
+        translate([-lengthBase/2, moveBack, 0]) {
+            color("green", 0.5) {
+                difference() {
+                    linear_extrude(height=heightMount, scale=[topLength / lengthMount, 1]) {
+                        square([lengthMount, widthWall], center=true);
+                    }
+                    translate([-6*widthWall,0,heightMount/2]) {
+                        cube([12*widthWall+EPS, 2*widthWall+EPS, heightMount+EPS], center=true);
+                    }
+                }
+            }
+        }
+    }
 
 // Main --------------------
 vinyl_hook_holder();
