@@ -8,4 +8,4 @@ Data source for [Cook w/ Code](https://cookwcode.com/) projects
 
 Datasets are tagged by folder code. For example, `xyz--folder-name` has code `xyz`, so a tag could be like `xyz-v1`. 
 
-See Releases for info on specific data updates. Checkout the dataset readme's for data documentation.
+See [Releases](https://github.com/cookwcode/data/releases) for info on specific data updates. Checkout the dataset readme's for data documentation.
