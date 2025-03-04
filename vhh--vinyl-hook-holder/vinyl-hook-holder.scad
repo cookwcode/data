@@ -28,18 +28,10 @@ module vinyl_hook_holder(
         topLength = topLength*2;  // Length of the top of the back mount
 
         // Base
-        difference() {
         color("blue", 0.5) {
             linear_extrude(heightBase) {
                 square([lengthBase, widthBase], center = true);
             }
-        }
-
-        color("yellow", 0.5) {
-            linear_extrude(heightBase*2) {
-                circle(r = 10);
-            }
-        } 
         }
         // Front Channel
         translate([0, moveFront-halfWall, 0]) {
