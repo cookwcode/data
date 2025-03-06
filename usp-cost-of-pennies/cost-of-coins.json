@@ -82,5 +82,19 @@
         "five-cent": 0.0941,
         "dime": 0.0456,
         "quarter-dollar": 0.1050
+    },
+    {
+        "year": 2012,
+        "one-cent": 0.0200,
+        "five-cent": 0.1009,
+        "dime": 0.0499,
+        "quarter-dollar": 0.1130
+    },
+    {
+        "year": 2011,
+        "one-cent": 0.0241,
+        "five-cent": 0.1118,
+        "dime": 0.0565,
+        "quarter-dollar": 0.1114
     }
 ]
