@@ -1,0 +1,95 @@
+[
+    {
+        "year": 2024,
+        "one-cent": 0.0369,
+        "five-cent": 0.1378,
+        "dime": 0.0576,
+        "quarter-dollar": 0.1468,
+        "half-dollar": 0.3397
+    },
+    {
+        "year": 2023,
+        "one-cent": 0.0307,
+        "five-cent": 0.1154,
+        "dime": 0.0530,
+        "quarter-dollar": 0.1163,
+        "half-dollar": 0.2598
+    },
+    {
+        "year": 2022,
+        "one-cent": 0.0272,
+        "five-cent": 0.0141,
+        "dime": 0.0503,
+        "quarter-dollar": 0.1111,
+        "half-dollar": 0.1715
+    },
+    {
+        "year": 2021,
+        "one-cent": 0.0210,
+        "five-cent": 0.0852,
+        "dime": 0.0439,
+        "quarter-dollar": 0.0963,
+        "half-dollar": 0.1167
+    },
+    {
+        "year": 2020,
+        "one-cent": 0.0176,
+        "five-cent": 0.0742,
+        "dime": 0.0373,
+        "quarter-dollar": 0.0862,
+        "half-dollar": 0.2500
+    },
+    {
+        "year": 2019,
+        "one-cent": 0.0199,
+        "five-cent": 0.0762,
+        "dime": 0.0373,
+        "quarter-dollar": 0.0901,
+        "half-dollar": null
+    },
+    {
+        "year": 2018,
+        "one-cent": 0.0206,
+        "five-cent": 0.0753,
+        "dime": 0.0373,
+        "quarter-dollar": 0.0887,
+        "half-dollar": 0.0658
+    },
+    {
+        "year": 2017,
+        "one-cent": 0.0182,
+        "five-cent": 0.0660,
+        "dime": 0.0333,
+        "quarter-dollar": 0.0824,
+        "half-dollar": null
+    },
+    {
+        "year": 2016,
+        "one-cent": 0.0150,
+        "five-cent": 0.0632,
+        "dime": 0.0308,
+        "quarter-dollar": 0.0763,
+        "half-dollar": null
+    },
+    {
+        "year": 2015,
+        "one-cent": 0.0143,
+        "five-cent": 0.0744,
+        "dime": 0.0354,
+        "quarter-dollar": 0.0844
+    },
+    {
+        "year": 2014,
+        "one-cent": 0.0166,
+        "five-cent": 0.0809,
+        "dime": 0.0391,
+        "quarter-dollar": 0.0895
+    },
+    {
+        "year": 2013,
+        "one-cent": 0.0183,
+        "five-cent": 0.0941,
+        "dime": 0.0456,
+        "quarter-dollar": 0.1050
+    }
+]
