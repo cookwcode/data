@@ -2,7 +2,7 @@
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/cookwcode/data)
 
-Data source for [Cook w/ Code](https://cookwcode.com/) projects
+Data source for selected [Cook w/ Code](https://cookwcode.com/) projects
 
 ## Tags
 
