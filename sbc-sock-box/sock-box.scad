@@ -6,7 +6,12 @@ box_width_in = 3;
 box_height_in = 3;    
 box_depth_in = 9;     
 wall_thickness_in = 0.125;
-corner_radius_in = 0.125;  // Internal corner radius  
+corner_radius_in = 0.125;  // Internal corner radius
+
+// Hole parameters
+front_back_hole_diameter_in = 0.5;  // Diameter of holes in front/back walls
+side_hole_diameter_in = 0.375;      // Diameter of holes in side walls  
+side_hole_spacing_in = 1.5;         // Spacing between holes along sides  
 
 // Rounded cube module
 module rounded_cube(size, radius) {
@@ -31,7 +36,10 @@ module SockBox(
     height_in = box_height_in, 
     depth_in = box_depth_in,
     wall_thickness_in = wall_thickness_in,
-    corner_radius_in = corner_radius_in
+    corner_radius_in = corner_radius_in,
+    front_back_hole_diameter_in = front_back_hole_diameter_in,
+    side_hole_diameter_in = side_hole_diameter_in,
+    side_hole_spacing_in = side_hole_spacing_in
 ) {
     // Convert inches to millimeters
     width_mm = width_in * 25.4;
@@ -39,6 +47,9 @@ module SockBox(
     depth_mm = depth_in * 25.4;
     wall_thickness_mm = wall_thickness_in * 25.4;
     corner_radius_mm = corner_radius_in * 25.4;
+    front_back_hole_diameter_mm = front_back_hole_diameter_in * 25.4;
+    side_hole_diameter_mm = side_hole_diameter_in * 25.4;
+    side_hole_spacing_mm = side_hole_spacing_in * 25.4;
     
     // Calculate internal dimensions
     int_width = width_mm - (2 * wall_thickness_mm);
@@ -55,6 +66,38 @@ module SockBox(
         translate([wall_thickness_mm, wall_thickness_mm, wall_thickness_mm]) {
             color("red", 0.5) {
                 rounded_cube([int_width, int_depth, int_height + EPS], corner_radius_mm);
+            }
+        }
+        
+        // Front wall hole (centered in XZ plane)
+        translate([width_mm/2, -EPS, height_mm/2]) {
+            rotate([-90, 0, 0]) {
+                cylinder(d = front_back_hole_diameter_mm, h = wall_thickness_mm + 2*EPS);
+            }
+        }
+        
+        // Back wall hole (centered in XZ plane)
+        translate([width_mm/2, depth_mm - wall_thickness_mm - EPS, height_mm/2]) {
+            rotate([-90, 0, 0]) {
+                cylinder(d = front_back_hole_diameter_mm, h = wall_thickness_mm + 2*EPS);
+            }
+        }
+        
+        // Left side holes (periodic along Y direction)
+        for (y = [side_hole_spacing_mm : side_hole_spacing_mm : depth_mm - side_hole_spacing_mm]) {
+            translate([-EPS, y, height_mm/2]) {
+                rotate([0, 90, 0]) {
+                    cylinder(d = side_hole_diameter_mm, h = wall_thickness_mm + 2*EPS);
+                }
+            }
+        }
+        
+        // Right side holes (periodic along Y direction)  
+        for (y = [side_hole_spacing_mm : side_hole_spacing_mm : depth_mm - side_hole_spacing_mm]) {
+            translate([width_mm - wall_thickness_mm - EPS, y, height_mm/2]) {
+                rotate([0, 90, 0]) {
+                    cylinder(d = side_hole_diameter_mm, h = wall_thickness_mm + 2*EPS);
+                }
             }
         }
     }
