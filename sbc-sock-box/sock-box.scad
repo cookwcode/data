@@ -9,7 +9,7 @@ wall_thickness_in = 0.125;
 corner_radius_in = 0.125;  // Internal corner radius
 
 // Hole parameters
-front_back_hole_diameter_in = 1;  // Diameter of holes in front/back walls
+front_back_hole_diameter_in = 1.25;  // Diameter of holes in front/back walls
 side_hole_diameter_in = 0.75;      // Diameter of holes in side walls  
 side_hole_spacing_in = 1.25;         // Spacing between holes along sides
 bottom_hole_diameter_in = 0.5;      // Diameter of holes in bottom
