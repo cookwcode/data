@@ -15,6 +15,7 @@ See [Releases](https://github.com/cookwcode/data/releases) for info on specific 
 | Code | Folder | Description |
 |------|--------|-------------|
 | `dunk` | [dunk--dunkey-playlist-stats](./dunk--dunkey-playlist-stats) | Dunkey Playlist Stats |
+| `fyt` | [fyt--fetch-youtube-data](./fyt--fetch-youtube-data) | Fetch YouTube Channel Data |
 | `hpt` | [hpt--harry-potter-timeline](./hpt--harry-potter-timeline) | Harry Potter Books and Films |
 | `nyer` | [nyer--newyorker-cover-colors](./nyer--newyorker-cover-colors) | New Yorker Cover Colors |
 | `pota` | [pota--planet-of-the-apes](./pota--planet-of-the-apes) | Planet of the Apes Films |
