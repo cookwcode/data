@@ -18,6 +18,7 @@ See [Releases](https://github.com/cookwcode/data/releases) for info on specific 
 | `fyt` | [fyt--fetch-youtube-data](./fyt--fetch-youtube-data) | Fetch YouTube Channel Data |
 | `hpt` | [hpt--harry-potter-timeline](./hpt--harry-potter-timeline) | Harry Potter Books and Films |
 | `nyer` | [nyer--newyorker-cover-colors](./nyer--newyorker-cover-colors) | New Yorker Cover Colors |
+| `nytc` | [nytc--nyt-cooking-yt-data](./nytc--nyt-cooking-yt-data) | NYT Cooking YouTube Data |
 | `pota` | [pota--planet-of-the-apes](./pota--planet-of-the-apes) | Planet of the Apes Films |
 | `scf` | [scf--simple-conical-funnel](./scf--simple-conical-funnel) | Simple funnel |
 | `upia` | [upia--us-prez-inauguration-ages](./upia--us-prez-inauguration-ages) | US Presidents by Inauguration Age |
